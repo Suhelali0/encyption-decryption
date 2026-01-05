@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGuard Pro | Dual Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <h1>🔐 SecureGuard Pro</h1>
+    <p class="subtitle">Industry Standard AES-256 Security</p>
+
+    <div class="dual-container">
+        <div class="panel encrypt-panel">
+            <h2>Encrypt Text</h2>
+            <label>Plain Message</label>
+            <textarea id="encMessage" placeholder="Normal message likho..."></textarea>
+            <label>Secret Key</label>
+            <input type="text" id="encKey" placeholder="Password set karo">
+            <button class="btn-enc" onclick="handleEncrypt()">Encrypt Now ↓</button>
+            <div class="result-box">
+                <label>Encrypted Code (Ciphertext):</label>
+                <div id="encResult" class="result-text">---</div>
+            </div>
+        </div>
+
+        <div class="panel decrypt-panel">
+            <h2>Decrypt Text</h2>
+            <label>Encrypted Code</label>
+            <textarea id="decMessage" placeholder="Kachra code (Ciphertext) yahan paste karo..."></textarea>
+            <label>Secret Key</label>
+            <input type="text" id="decKey" placeholder="Wahi password dalo">
+            <button class="btn-dec" onclick="handleDecrypt()">Decrypt Now ↓</button>
+            <div class="result-box">
+                <label>Original Message:</label>
+                <div id="decResult" class="result-text">---</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
